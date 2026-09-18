@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+<title>Pils. — Suivi de pilule</title>
+<meta name="description" content="Votre pilule, dans un écrin. Suivi de prise, journal des symptômes, statistiques." />
+
+<link rel="manifest" href="/manifest.webmanifest" />
+<meta name="theme-color" content="#D8748A" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+
+<!-- iOS : mode standalone à l'ajout sur l'écran d'accueil -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Pils." />
+
+<meta name="mobile-web-app-capable" content="yes" />
+
+<style>
+  html, body { margin: 0; padding: 0; background: #F6F1EA; }
+  #root { min-height: 100vh; min-height: 100dvh; }
+  #boot { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+    background: #F6F1EA; font-family: -apple-system, BlinkMacSystemFont, sans-serif; color: #5E3039; }
+  #boot img { height: 34px; opacity: .9; }
+</style>
+</head>
+<body>
+<div id="root"><div id="boot"><img src="/icon-rounded-512.png" alt="Pils." style="height:56px;border-radius:14px" /></div></div>
+<script src="/app.js"></script>
+</body>
+</html>
