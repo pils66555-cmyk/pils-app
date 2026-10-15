@@ -1,4 +1,4 @@
-const CACHE = "pils-shell-v13";
+const CACHE = "pils-shell-v19";
 const SHELL = ["/", "/index.html", "/app.js", "/manifest.webmanifest", "/icon-192.png", "/icon-512.png"];
 
 self.addEventListener("install", (e) => {
@@ -15,6 +15,7 @@ self.addEventListener("activate", (e) => {
 
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
+  { const p = new URL(e.request.url).pathname; if (p.startsWith("/merci") || p.startsWith("/notice")) return; }
   e.respondWith(
     caches.match(e.request).then((cached) => {
       const fetchPromise = fetch(e.request)
